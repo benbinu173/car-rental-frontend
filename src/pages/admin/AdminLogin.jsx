@@ -13,7 +13,7 @@ const AdminLogin = () => {
     setError("");
 
     try {
-      const res = await axios.post("https://car-rental-backend-pj3k.onrender.com/api/admin/auth/login", {
+      const res = await axios.post(`https://car-rental-backend-iy1d.onrender.com/api/admin/auth/login`, {
         email,
         password,
       });

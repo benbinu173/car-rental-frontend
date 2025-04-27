@@ -10,7 +10,7 @@ const ManageBookings = () => {
   const fetchBookings = async () => {
     try {
       const token = sessionStorage.getItem("token");
-      const response = await axios.get("https://car-rental-backend-pj3k.onrender.com/api/admin/bookings", {
+      const response = await axios.get(`https://car-rental-backend-iy1d.onrender.com/api/admin/bookings`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -39,7 +39,7 @@ const ManageBookings = () => {
     if (window.confirm("Are you sure you want to cancel this booking?")) {
       try {
         const token = sessionStorage.getItem("token");
-        await axios.delete(`https://car-rental-backend-pj3k.onrender.com/api/admin/bookings/${id}`, {
+        await axios.delete(`https://car-rental-backend-iy1d.onrender.com/api/admin/bookings/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -57,7 +57,7 @@ const ManageBookings = () => {
     try {
       const token = sessionStorage.getItem("token");
       await axios.put(
-        `https://car-rental-backend-pj3k.onrender.com/api/admin/bookings/${id}/status`,
+        `https://car-rental-backend-iy1d.onrender.com/api/admin/bookings/${id}/status`,
         { status },
         {
           headers: {

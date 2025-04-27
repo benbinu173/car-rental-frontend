@@ -20,7 +20,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://car-rental-backend-pj3k.onrender.com/api/auth/register", {
+      const res = await axios.post("https://car-rental-backend-iy1d.onrender.com/api/auth/register", {
           email: formData.email,
           password: formData.password,
           name: formData.name,

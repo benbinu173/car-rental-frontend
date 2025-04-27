@@ -9,7 +9,7 @@ const AdminDashboard = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const res = await axios.get("https://car-rental-backend-pj3k.onrender.com/api/admin/stats", {
+        const res = await axios.get(`https://car-rental-backend-iy1d.onrender.com/api/admin/stats`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setStats(res.data);
@@ -20,7 +20,7 @@ const AdminDashboard = () => {
 
     const fetchRecentBookings = async () => {
       try {
-        const res = await axios.get("https://car-rental-backend-pj3k.onrender.com/api/admin/recent-bookings", {
+        const res = await axios.get(`https://car-rental-backend-iy1d.onrender.com/api/admin/recent-bookings`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setRecentBookings(res.data);

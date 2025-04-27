@@ -10,7 +10,7 @@ const CarDetails = () => {
   useEffect(() => {
     const fetchCar = async () => {
       try {
-        const response = await axios.get(`https://car-rental-backend-pj3k.onrender.com/api/cars/${id}`);
+        const response = await axios.get(`https://car-rental-backend-iy1d.onrender.com/api/cars/${id}`);
 
         console.log("Fetched Car:", response.data);
 

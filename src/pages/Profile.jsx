@@ -13,7 +13,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await axios.get("https://car-rental-backend-pj3k.onrender.com/api/user/profile", {
+        const res = await axios.get("https://car-rental-backend-iy1d.onrender.com/api/user/profile", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUser({
@@ -32,7 +32,7 @@ const Profile = () => {
 
     const fetchBookings = async () => {
       try {
-        const response = await axios.get("https://car-rental-backend-pj3k.onrender.com/api/bookings/my-bookings", {
+        const response = await axios.get("https://car-rental-backend-iy1d.onrender.com/api/bookings/my-bookings", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setBookings(response.data);
@@ -71,7 +71,7 @@ const Profile = () => {
     }
 
     try {
-      await axios.put("https://car-rental-backend-pj3k.onrender.com/api/user/profile", formData, {
+      await axios.put("https://car-rental-backend-iy1d.onrender.com/api/user/profile", formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "multipart/form-data",
@@ -101,7 +101,7 @@ const Profile = () => {
                 src={
                   previewImage ||
                   (user.profileImage
-                    ? `https://car-rental-backend-pj3k.onrender.com/uploads/${user.profileImage}`
+                    ? `https://car-rental-backend-iy1d.onrender.com/uploads/${user.profileImage}`
                     : "/images/user-placeholder.jpg")
                 }
                 alt="Profile"

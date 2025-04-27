@@ -9,7 +9,7 @@ const Reports = () => {
     const fetchReports = async () => {
       try {
         const token = sessionStorage.getItem("token");
-        const res = await axios.get("https://car-rental-backend-pj3k.onrender.com/api/admin/reports", {
+        const res = await axios.get("https://car-rental-backend-iy1d.onrender.com/api/admin/reports", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

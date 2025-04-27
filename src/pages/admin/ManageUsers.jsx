@@ -7,7 +7,7 @@ const ManageUsers = () => {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get("https://car-rental-backend-pj3k.onrender.com/api/admin/users", {
+      const res = await axios.get(`https://car-rental-backend-iy1d.onrender.com/api/admin/users`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUsers(res.data);
@@ -20,7 +20,7 @@ const ManageUsers = () => {
     if (!window.confirm("Are you sure you want to delete this user?")) return;
 
     try {
-      await axios.delete(`https://car-rental-backend-pj3k.onrender.com/api/admin/users/${userId}`, {
+      await axios.delete(`https://car-rental-backend-iy1d.onrender.com/api/admin/users/${userId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUsers(users.filter((user) => user._id !== userId));
@@ -32,7 +32,7 @@ const ManageUsers = () => {
   const toggleAdmin = async (userId) => {
     try {
       const res = await axios.put(
-        `https://car-rental-backend-pj3k.onrender.com/api/admin/users/${userId}/toggleAdmin`,
+        `https://car-rental-backend-iy1d.onrender.com/api/admin/users/${userId}/toggleAdmin`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );

@@ -8,7 +8,7 @@ const CarList = () => {
   useEffect(() => {
     const fetchCars = async () => {
       try {
-        const response = await axios.get("https://car-rental-backend-pj3k.onrender.com/api/cars");
+        const response = await axios.get("https://car-rental-backend-iy1d.onrender.com/api/cars");
 
         // Check if response is an array or has a 'cars' key
         if (Array.isArray(response.data)) {

@@ -42,7 +42,7 @@ const Home = () => {
   useEffect(() => {
     const fetchCars = async () => {
       try {
-        const res = await axios.get("https://car-rental-backend-pj3k.onrender.com/api/cars");
+        const res = await axios.get("https://car-rental-backend-iy1d.onrender.com/api/cars");
         console.log("Fetched cars data:", res.data); // 👈 Add this to inspect
         setCars(res.data.cars.slice(0, 3)); // Update this if response is { cars: [...] }
       } catch (error) {

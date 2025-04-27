@@ -18,7 +18,7 @@ const Booking = () => {
    useEffect(() => {
      const fetchCar = async () => {
        try {
-         const response = await axios.get(`https://car-rental-backend-pj3k.onrender.com/api/cars/${id}`);
+         const response = await axios.get(`https://car-rental-backend-iy1d.onrender.com/api/cars/${id}`);
  
          console.log("Fetched Car:", response.data);
  
@@ -53,7 +53,7 @@ const Booking = () => {
       }
   
       const res = await axios.post(
-        "https://car-rental-backend-pj3k.onrender.com/api/bookings/book",
+        "https://car-rental-backend-iy1d.onrender.com/api/bookings/book",
         {
           car: car._id,
           pricePerDay: car.pricePerDay,

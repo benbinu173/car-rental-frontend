@@ -13,7 +13,7 @@ const UserDashboard = () => {
 
     try {
       console.log("Fetching user profile...");
-      const { data: userData } = await axios.get("https://car-rental-backend-pj3k.onrender.com/api/user/profile", {
+      const { data: userData } = await axios.get("https://car-rental-backend-iy1d.onrender.com/api/user/profile", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -22,7 +22,7 @@ const UserDashboard = () => {
       setUser(userData);
 
       console.log("Fetching bookings...");
-      const { data: bookingsData } = await axios.get("https://car-rental-backend-pj3k.onrender.com/api/bookings/user/bookings", {
+      const { data: bookingsData } = await axios.get("https://car-rental-backend-iy1d.onrender.com/api/bookings/user/bookings", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

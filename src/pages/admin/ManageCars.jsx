@@ -27,7 +27,7 @@ const ManageCars = () => {
   const fetchCars = async () => {
     setLoading(true);
     try {
-      const res = await axios.get("https://car-rental-backend-pj3k.onrender.com/api/admin/cars", {
+      const res = await axios.get(`https://car-rental-backend-iy1d.onrender.com/api/admin/cars`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setCars(res.data);
@@ -41,7 +41,7 @@ const ManageCars = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this car?")) {
       try {
-        await axios.delete(`https://car-rental-backend-pj3k.onrender.com/api/cars/${id}`, {
+        await axios.delete(`https://car-rental-backend-iy1d.onrender.com/api/cars/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setCars((prev) => prev.filter((car) => car._id !== id));
@@ -69,7 +69,7 @@ const ManageCars = () => {
     e.preventDefault();
     try {
       await axios.put(
-        `https://car-rental-backend-pj3k.onrender.com/api/cars/${editingCar._id}`,
+        `https://car-rental-backend-iy1d.onrender.com/api/cars/${editingCar._id}`,
         editForm,
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -87,7 +87,7 @@ const ManageCars = () => {
   const handleAddCar = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://car-rental-backend-pj3k.onrender.com/api/cars/add", addForm, {
+      const res = await axios.post("https://car-rental-backend-iy1d.onrender.com/api/cars/add", addForm, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setCars((prev) => [...prev, res.data]);
